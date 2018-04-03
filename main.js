@@ -1,7 +1,6 @@
 /*
 terabit ported to JS
 Code done by Terapixel
-
 PLEASE READ: I don't know what I'm doing
 */
 
@@ -11,11 +10,11 @@ PLEASE READ: I don't know what I'm doing
 
 // Colors
 var colors = {
-    var white = (255, 255, 255),
-    var red = (255, 0, 0),
-    var green = (63, 163, 47),
-    var blue = (131, 177, 255);
-}
+    white: [255, 255, 255],
+    red: [255, 0, 0],
+    green: [63, 163, 47],
+    blue: [131, 177, 255]
+};
 
 // Game configuration
 var configuration = {
@@ -32,7 +31,7 @@ var configuration = {
         }
     },
     // Increase this value to make the terrain less "pointy".
-    noise_frequency = 20; // need to import JS noise library...
+    noise_frequency: 20, // need to import JS noise library...
     // default game scene
     game_map: {
         preload: preload,
@@ -45,8 +44,7 @@ var configuration = {
 // Takes the game configuration and initiates the game
 var game = new Phaser.Game(configuration);
 
-function preload ()
-{
+function preload() {
     this.load.image('sky', 'src/games/firstgame/assets/sky.png');
     this.load.image('ground', 'src/games/firstgame/assets/platform.png');
     this.load.image('star', 'src/games/firstgame/assets/star.png');
@@ -59,21 +57,16 @@ function preload ()
 
 var platforms;
 
-function create ()
-{
+function create() {
     this.add.image(400, 300, 'sky');
-
     platforms = this.physics.add.staticGroup();
-
     platforms.create(400, 568, 'ground').setScale(2).refreshBody();
-
     platforms.create(600, 400, 'ground');
     platforms.create(50, 250, 'ground');
     platforms.create(750, 220, 'ground');
 }
 
-function update ()
-{
+function update() {
 }
 
 
