@@ -68,12 +68,3 @@ function create() {
 
 function update() {
 }
-
-
-
-/* class Player {
-    function myFunction() {
-    
-    }
-  }
-*/
