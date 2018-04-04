@@ -1,12 +1,16 @@
-var entities = {player, enemy};
-var terrain = {};
-var blocks = {};
+player: []
+enemies: []
+entities: [player, enemies];
+terrain: [];
+blocks: [];
+controls: [left, down, right, left];
 
 
 var game_variables = {
   entities: [],
   terrain: [],
-  blocks: []
+  blocks: [],
+  controls: []
 };
 
 
